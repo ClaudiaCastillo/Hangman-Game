@@ -13,7 +13,7 @@ var hangmanGame = {
         },
         "independence": {
             picture: "independenceDay.jpg",
-            funfacts: "Independence Day is annually celebrated on July 4 and is often known as "/"the Fourth of July"/". It is the anniversary of the publication of the declaration of independence from Great Britain in 1776. Patriotic displays and family events are organized throughout the United States."
+            funfacts: "Independence Day is annually celebrated on July 4 and is often known as 'the Fourth of July'. It is the anniversary of the publication of the declaration of independence from Great Britain in 1776. Patriotic displays and family events are organized throughout the United States."
         },
         "labor": {
             picture: "laborDay.jpg",

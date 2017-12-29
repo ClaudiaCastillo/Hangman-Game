@@ -1,19 +1,19 @@
 #container {
     position: absolute;
-    top: 430px;
+    top: 460px;
     left: 600px;
 }
 
 #sub-wrapper {
     position: absolute;
-    top: 330px;
+    top: 360px;
     left: 20px;
     margin-right: 20px;
 }
 
 #image-container {
     position: absolute;
-    top: 410px;
+    top: 460px;
     left: 200px;
 }
 
