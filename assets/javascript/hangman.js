@@ -35,11 +35,11 @@ var hangmanGame = {
             picture: "christmasDay.jpg",
             funfacts: "Many people in the United States celebrate Christmas Day on December 25. The day celebrates Jesus Christ's birth. It is often combined with customs from pre-Christian winter celebrations. Many people erect Christmas trees, decorate their homes, visit family or friends and exchange gifts."
         },
-        "blackfriday": {
+        "black": {
             picture: "blackfriday.jpg",
             funfacts: "Black Friday is the day after Thanksgiving Day and the Friday before Cyber Monday in the United States. It is a busy shopping day and is a holiday in some states."
         },
-        "cybermonday": {
+        "cyber": {
             picture: "cybermonday.jpg",
             funfacts: "Cyber Monday falls on the first Monday after Thanksgiving Day and Black Friday in the United States. It's becoming one of busiest online shopping days for deals and discounts in the US."
         },
@@ -145,6 +145,25 @@ var hangmanGame = {
         // We start with an empty string.
         var wordView = "";
 
+        var displayAdd = "";
+
+        var wordLength = this.lettersOfTheWord.length;
+
+        if (wordLength < 6){
+            if (this.lettersOfTheWord[0] === "b"){
+                displayAdd = " friday";
+            }
+            else if (this.lettersOfTheWord[0] === "c"){
+                displayAdd = " monday";
+            }
+            else{
+            displayAdd = " day";
+            }
+        }
+        else{
+            displayAdd = " day";
+        }
+
         // Loop through the letters of the word we are trying to guess..
         for (var i = 0; i < this.lettersOfTheWord.length; i++) {
             // If the current letter has been guessed, display that letter.
@@ -157,8 +176,9 @@ var hangmanGame = {
             }
         }
 
+
         // Update the page with the new string we built.
-        document.querySelector("#current-word").innerHTML = wordView;
+        document.querySelector("#current-word").innerHTML = wordView + displayAdd;
     },
 
     // Function that "restarts" the game by resetting all of the variables.
